@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Lung Cancer Prediction</legend>
+        </h1>
+
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="GENDER" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">AGE</label>
+            <input class="form-control" type="number" name="reading_score"
+                placeholder="Enter your Age" min='0' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Smoking (yes=2 | no =1)</label>
+            <select class="form-control",name="SMOKING" placeholder="Smoking (yes=2 | no =1)">
+                <option class="placeholder" selected disabled value="">DO YOU SMOKE</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">YELLOW FINGERS</label>
+            <select class="form-control", placeholder="YELLOW FINGERS">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE YELLOW FINGERS</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">ANXIETY</label>
+            <select class="form-control", placeholder="ANXIETY">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE ANXIETY</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PEER_PRESSURE</label>
+            <select class="form-control", placeholder="PEER_PRESSURE">
+                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE PEER_PRESSURE</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">CHRONIC DISEASE</label>
+            <select class="form-control", placeholder="CHRONIC DISEASE">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE ANY CHRONIC DISEASE</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">FATIGUE</label>
+            <select class="form-control", placeholder="FATIGUE">
+                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE FATIGUE   </option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">ALLERGY</label>
+            <select class="form-control", placeholder="ALLERGY">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE ALLERGY</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">WHEEZING</label>
+            <select class="form-control", placeholder="WHEEZING">
+                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE WHEEZING</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">ALCOHOL CONSUMING</label>
+            <select class="form-control", placeholder="ALCOHOL CONSUMING">
+                <option class="placeholder" selected disabled value="">DO YOU CONSUME ALCOHOL</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">COUGHING</label>
+            <select class="form-control", placeholder="COUGHING">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE COUGHING</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">CHEST PAIN</label>
+            <select class="form-control", placeholder="CHEST PAIN">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE CHEST PAIN</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">SWALLOWING DIFFICULTY</label>
+            <select class="form-control", placeholder="SWALLOWING DIFFICULTY">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE SWALLOWING DIFFICULTY</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">SHORTNESS OF BREATH</label>
+            <select class="form-control", placeholder="SHORTNESS OF BREATH">
+                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE SHORTNESS OF BREATH</option>
+                <option value="   ">
+                    2
+                </option>
+                <option value="   ">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="predict lung cancer" required />
+        </div>
+    </form>
+    <h2>
+        THE  prediction is {{results}}
+     </h2>
+    </div>
+
+</body>
+</html>
