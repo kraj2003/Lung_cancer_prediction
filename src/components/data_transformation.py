@@ -77,8 +77,8 @@ class DataTransformation:
 
             le = LabelEncoder()   
             target_column_name="LUNG_CANCER"    # look over here , nedd to relace math score with the fit_transforn
-            le.fit_transform(train_df[target_column_name])    
-            
+            train_df[target_column_name]=le.fit_transform(train_df[target_column_name])
+            test_df[target_column_name]=le.fit_transform(test_df[target_column_name])
             # target_column_name="LUNG_CANCER"  
             # numerical_features=['writing_score',"reading_score"]
 

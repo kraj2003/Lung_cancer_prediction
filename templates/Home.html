@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div class="login">
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
@@ -17,10 +17,10 @@
             <label class="form-label">Gender</label>
             <select class="form-control" name="GENDER" placeholder="Enter you Gender" required>
                 <option class="placeholder" selected disabled value="">Select your Gender</option>
-                <option value="male">
+                <option value="M">
                     Male
                 </option>
-                <option value="female">
+                <option value="F">
                     Female
                 </option>
             </select>
@@ -28,18 +28,18 @@
 
         <div class="mb-3">
             <label class="form-label">AGE</label>
-            <input class="form-control" type="number" name="reading_score"
+            <input class="form-control" type="number" name="AGE"
                 placeholder="Enter your Age" min='0' max='100' />
         </div>
 
         <div class="mb-3">
             <label class="form-label">Smoking (yes=2 | no =1)</label>
-            <select class="form-control",name="SMOKING" placeholder="Smoking (yes=2 | no =1)">
+            <select class="form-control",name="SMOKING" placeholder="SMOKING">
                 <option class="placeholder" selected disabled value="">DO YOU SMOKE</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -48,12 +48,12 @@
 
         <div class="mb-3">
             <label class="form-label">YELLOW FINGERS</label>
-            <select class="form-control", placeholder="YELLOW FINGERS">
+            <select class="form-control",name="YELLOW FINGERS", placeholder="YELLOW_FINGERS">
                 <option class="placeholder" selected disabled value="">DO YOU HAVE YELLOW FINGERS</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -62,12 +62,12 @@
 
         <div class="mb-3">
             <label class="form-label">ANXIETY</label>
-            <select class="form-control", placeholder="ANXIETY">
+            <select class="form-control",name="ANXIETY", placeholder="ANXIETY">
                 <option class="placeholder" selected disabled value="">DO YOU HAVE ANXIETY</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -75,13 +75,13 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">PEER_PRESSURE</label>
-            <select class="form-control", placeholder="PEER_PRESSURE">
+            <label class="form-label">PEER PRESSURE</label>
+            <select class="form-control",name="PEER PRESSURE", placeholder="PEER_PRESSURE">
                 <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE PEER_PRESSURE</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -91,12 +91,12 @@
 
         <div class="mb-3">
             <label class="form-label">CHRONIC DISEASE</label>
-            <select class="form-control", placeholder="CHRONIC DISEASE">
+            <select class="form-control",name="CHRONIC DISEASE", placeholder="CHRONIC_DISEASE">
                 <option class="placeholder" selected disabled value="">DO YOU HAVE ANY CHRONIC DISEASE</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -105,12 +105,12 @@
 
         <div class="mb-3">
             <label class="form-label">FATIGUE</label>
-            <select class="form-control", placeholder="FATIGUE">
-                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE FATIGUE   </option>
-                <option value="   ">
+            <select class="form-control",name="FATIGUE", placeholder="FATIGUE">
+                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE FATIGUE</option>
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -119,12 +119,12 @@
 
         <div class="mb-3">
             <label class="form-label">ALLERGY</label>
-            <select class="form-control", placeholder="ALLERGY">
+            <select class="form-control",name="ALLERGY", placeholder="ALLERGY">
                 <option class="placeholder" selected disabled value="">DO YOU HAVE ALLERGY</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -133,12 +133,12 @@
 
         <div class="mb-3">
             <label class="form-label">WHEEZING</label>
-            <select class="form-control", placeholder="WHEEZING">
+            <select class="form-control",name="WHEEZING", placeholder="WHEEZING">
                 <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE WHEEZING</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -147,12 +147,12 @@
 
         <div class="mb-3">
             <label class="form-label">ALCOHOL CONSUMING</label>
-            <select class="form-control", placeholder="ALCOHOL CONSUMING">
+            <select class="form-control",name="ALCOHOL CONSUMING", placeholder="ALCOHOL_CONSUMING">
                 <option class="placeholder" selected disabled value="">DO YOU CONSUME ALCOHOL</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -161,40 +161,12 @@
 
         <div class="mb-3">
             <label class="form-label">COUGHING</label>
-            <select class="form-control", placeholder="COUGHING">
+            <select class="form-control",name="COUGHING", placeholder="COUGHING">
                 <option class="placeholder" selected disabled value="">DO YOU HAVE COUGHING</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
-                    1
-                </option>
-            </select>
-
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">CHEST PAIN</label>
-            <select class="form-control", placeholder="CHEST PAIN">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE CHEST PAIN</option>
-                <option value="   ">
-                    2
-                </option>
-                <option value="   ">
-                    1
-                </option>
-            </select>
-
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">SWALLOWING DIFFICULTY</label>
-            <select class="form-control", placeholder="SWALLOWING DIFFICULTY">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE SWALLOWING DIFFICULTY</option>
-                <option value="   ">
-                    2
-                </option>
-                <option value="   ">
+                <option value="1">
                     1
                 </option>
             </select>
@@ -203,12 +175,39 @@
 
         <div class="mb-3">
             <label class="form-label">SHORTNESS OF BREATH</label>
-            <select class="form-control", placeholder="SHORTNESS OF BREATH">
+            <select class="form-control",name="SHORTNESS OF BREATH", placeholder="SHORTNESS_OF_BREATH">
                 <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE SHORTNESS OF BREATH</option>
-                <option value="   ">
+                <option value="2">
                     2
                 </option>
-                <option value="   ">
+                <option value="1">
+                    1
+                </option>
+            </select>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">SWALLOWING DIFFICULTY</label>
+            <select class="form-control",name="SWALLOWING DIFFICULTY", placeholder="SWALLOWING_DIFFICULTY">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE SWALLOWING DIFFICULTY</option>
+                <option value="2">
+                    2
+                </option>
+                <option value="1">
+                    1
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">CHEST PAIN</label>
+            <select class="form-control",name="CHEST PAIN", placeholder="CHEST_PAIN">
+                <option class="placeholder" selected disabled value="">DO YOU HAVE CHEST PAIN</option>
+                <option value="2">
+                    2
+                </option>
+                <option value="1">
                     1
                 </option>
             </select>

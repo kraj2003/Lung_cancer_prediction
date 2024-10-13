@@ -24,7 +24,7 @@ def predict_datapoint():
     else:
         data=CustomData(
             GENDER=request.form.get('GENDER'),
-            AGE=request.form.get('AGE'),
+            AGE=float(request.form.get('AGE')),
             SMOKING=request.form.get('SMOKING'),
             ANXIETY=request.form.get('ANXIETY'),
             PEER_PRESSURE=request.form.get('PEER PRESSURE'),
