@@ -41,20 +41,6 @@ class ModelTrainer:
                 "KNN":KNeighborsClassifier()
             }
 
-            # hyperparameters={
-            #     "Decision Tree": {
-            #             'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
-            #             # 'splitter':['best','random'],
-            #             # 'max_features':['sqrt','log2'],
-            #         },
-            #     "KNN":{
-            #         'n_estimators': [8,16,32,64,128,256]
-            #     },
-            #     "SVM":{'C': [0.1, 1, 10, 100, 1000],  
-            #       'gamma': [1, 0.1, 0.01, 0.001, 0.0001], 
-            #       'kernel': ['rbf']} 
-            # }
-
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models)
             print(model_report)
             logging.info(f"model report {model_report}")
