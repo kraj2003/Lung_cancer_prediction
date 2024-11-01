@@ -1,0 +1,11 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+    margin: 0%;
+    text-align: center;
+    background-color: aqua;
+}
+div{
+    text-align: center;
+    background-color: antiquewhite;
+}

@@ -4,224 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login">
-   
-       <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
-            <legend>Lung Cancer Prediction</legend>
-        </h1>
-
+    <h1> lung cancer</h1>
+    <form action="{{url_for('predict_datapoint')}}" method="post">
         <div class="mb-3">
-            <label class="form-label">Gender</label>
-            <select class="form-control" name="GENDER" placeholder="Enter you Gender" required>
-                <option class="placeholder" selected disabled value="">Select your Gender</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Gender" placeholder="Gender" required>
+                <option class="placeholder" selected disabled value="">Gender</option>
                 <option value="M">
-                    Male
+                    M
                 </option>
                 <option value="F">
-                    Female
+                    F
                 </option>
             </select>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label">AGE</label>
-            <input class="form-control" type="number" name="AGE"
-                placeholder="Enter your Age" min='0' max='100' />
-        </div>
+        <input type="number" name="Age" placeholder="Age" required="required"/>
 
         <div class="mb-3">
-            <label class="form-label">Smoking (yes=2 | no =1)</label>
-            <select class="form-control",name="SMOKING" placeholder="SMOKING">
-                <option class="placeholder" selected disabled value="">DO YOU SMOKE</option>
-                <option value="2">
-                    2
-                </option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Smoking" placeholder="Smoking" required>
+                <option class="placeholder" selected disabled value="">Smoking</option>
                 <option value="1">
-                    1
+                    NO
                 </option>
-            </select>
-
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">YELLOW FINGERS</label>
-            <select class="form-control",name="YELLOW FINGERS", placeholder="YELLOW_FINGERS">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE YELLOW FINGERS</option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">ANXIETY</label>
-            <select class="form-control",name="ANXIETY", placeholder="ANXIETY">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE ANXIETY</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Yellow fingers" placeholder="Yellow fingers" required>
+                <option class="placeholder" selected disabled value="">Yellow fingers</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">PEER PRESSURE</label>
-            <select class="form-control",name="PEER PRESSURE", placeholder="PEER_PRESSURE">
-                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE PEER_PRESSURE</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Anxiety" placeholder="Anxiety" required>
+                <option class="placeholder" selected disabled value="">Anxiety</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
-
         <div class="mb-3">
-            <label class="form-label">CHRONIC DISEASE</label>
-            <select class="form-control",name="CHRONIC DISEASE", placeholder="CHRONIC_DISEASE">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE ANY CHRONIC DISEASE</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Peer_pressure" placeholder="Peer_pressure" required>
+                <option class="placeholder" selected disabled value="">Peer_pressure</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">FATIGUE</label>
-            <select class="form-control",name="FATIGUE", placeholder="FATIGUE">
-                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE FATIGUE</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Chronic Disease" placeholder="Chronic Disease" required>
+                <option class="placeholder" selected disabled value="">Chronic Disease</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">ALLERGY</label>
-            <select class="form-control",name="ALLERGY", placeholder="ALLERGY">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE ALLERGY</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Fatigue" placeholder="Fatigue" required>
+                <option class="placeholder" selected disabled value="">Fatigue</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">WHEEZING</label>
-            <select class="form-control",name="WHEEZING", placeholder="WHEEZING">
-                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE WHEEZING</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Allergy" placeholder="Allergy" required>
+                <option class="placeholder" selected disabled value="">Allergy</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">ALCOHOL CONSUMING</label>
-            <select class="form-control",name="ALCOHOL CONSUMING", placeholder="ALCOHOL_CONSUMING">
-                <option class="placeholder" selected disabled value="">DO YOU CONSUME ALCOHOL</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Wheezing" placeholder="Wheezing" required>
+                <option class="placeholder" selected disabled value="">Wheezing</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">COUGHING</label>
-            <select class="form-control",name="COUGHING", placeholder="COUGHING">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE COUGHING</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Alcohol" placeholder="Alcohol" required>
+                <option class="placeholder" selected disabled value="">Alcohol</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">SHORTNESS OF BREATH</label>
-            <select class="form-control",name="SHORTNESS OF BREATH", placeholder="SHORTNESS_OF_BREATH">
-                <option class="placeholder" selected disabled value="">DO YOU EXPERIENCE SHORTNESS OF BREATH</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Coughing" placeholder="Coughing" required>
+                <option class="placeholder" selected disabled value="">Coughing</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <label class="form-label">SWALLOWING DIFFICULTY</label>
-            <select class="form-control",name="SWALLOWING DIFFICULTY", placeholder="SWALLOWING_DIFFICULTY">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE SWALLOWING DIFFICULTY</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Shortness of Breath" placeholder="Shortness of Breath" required>
+                <option class="placeholder" selected disabled value="">Shortness of Breath</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">CHEST PAIN</label>
-            <select class="form-control",name="CHEST PAIN", placeholder="CHEST_PAIN">
-                <option class="placeholder" selected disabled value="">DO YOU HAVE CHEST PAIN</option>
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Swallowing Difficulty" placeholder="Swallowing Difficulty" required>
+                <option class="placeholder" selected disabled value="">Swallowing Difficulty</option>
+                <option value="1">
+                    NO
+                </option>
                 <option value="2">
-                    2
-                </option>
-                <option value="1">
-                    1
+                    YES
                 </option>
             </select>
-
         </div>
 
         <div class="mb-3">
-            <input class="btn btn-primary" type="submit" value="predict lung cancer" required />
+            <!-- <label class="form-label">Gender</label> -->
+            <select class="form-control" name="Chest pain" placeholder="Chest pain" required>
+                <option class="placeholder" selected disabled value="">Chest pain</option>
+                <option value="1">
+                    NO
+                </option>
+                <option value="2">
+                    YES
+                </option>
+            </select>
         </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict if the person has cncer or not" required />
+        </div>
+
+        <h2>
+            THE  prediction is {{results}}
+        </h2>
     </form>
-    <h2>
-        THE  prediction is {{results}}
-     </h2>
-    </div>
-
 </body>
 </html>
