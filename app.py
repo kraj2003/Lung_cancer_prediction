@@ -23,22 +23,38 @@ def predict_datapoint():
         return render_template('Home.html')
     else:
         data=CustomData(
-            GENDER=request.form.get('GENDER'),
-            AGE=float(request.form.get('AGE')),
-            SMOKING=request.form.get('SMOKING'),
-            ANXIETY=request.form.get('ANXIETY'),
-            PEER_PRESSURE=request.form.get('PEER PRESSURE'),
-            FATIGUE=request.form.get('FATIGUE'),
-            WHEEZING=request.form.get('WHEEZING'),
-            ALLERGY=request.form.get('ALLERGY'),
-            ALCOHOL_CONSUMING=request.form.get('ALCOHOL CONSUMING'),
-            COUGHING=request.form.get('COUGHING'),
-            SWALLOWING_DIFFICULTY=request.form.get('SWALLOWING DIFFICULTY'),
-            SHORTNESS_OF_BREATH=request.form.get('SHORTNESS OF BREATH'),
-            CHEST_PAIN=request.form.get('CHEST PAIN'),
-            YELLOW_FINGERS=request.form.get('YELLOW FINGERS'),
-            CHRONIC_DISEASE=request.form.get('CHRONIC DISEASE'),
+            GENDER=request.form.get('Gender'),
+            AGE=float(request.form.get('Age')),
+            SMOKING=request.form.get('Smoking'),
+            YELLOW_FINGERS=request.form.get('Yellow fingers'),
+            ANXIETY=request.form.get('Anxiety'),
+            PEER_PRESSURE=request.form.get('Peer_pressure'),
+            CHRONIC_DISEASE=request.form.get('Chronic Disease'),
+            FATIGUE=request.form.get('Fatigue'),
+            ALLERGY=request.form.get('Allergy'),
+            WHEEZING=request.form.get('Wheezing'),
+            ALCOHOL_CONSUMING=request.form.get('Alcohol'),
+            COUGHING=request.form.get('Coughing'),
+            SHORTNESS_OF_BREATH=request.form.get('Shortness of Breath'),
+            SWALLOWING_DIFFICULTY=request.form.get('Swallowing Difficulty'),
+            CHEST_PAIN=request.form.get('Chest pain'),
+        # GENDER=float(request.form.get('Gender'))
+        # AGE=float(request.form.get('Age'))
+        # SMOKING=float(request.form.get('Smoking'))
+        # YELLOW_FINGERS=float(request.form.get('Yellow fingers'))
+        # ANXIETY=float(request.form.get('Anxiety'))
+        # PEER_PRESSURE=float(request.form.get('Peer_pressure'))
+        # CHRONIC_DISEASE=float(request.form.get('Chronic Disease'))
+        # FATIGUE=float(request.form.get('Fatigue'))
+        # ALLERGY=float(request.form.get('Allergy'))
+        # WHEEZING=float(request.form.get('Wheezing'))
+        # ALCOHOL_CONSUMING=float(request.form.get('Alcohol'))
+        # COUGHING=float(request.form.get('Coughing'))
+        # SHORTNESS_OF_BREATH=float(request.form.get('Shortness of Breath'))
+        # SWALLOWING_DIFFICULTY=float(request.form.get('Swallowing Difficulty'))
+        # CHEST_PAIN=float(request.form.get('Chest pain'))
         )
+
         pred_df=data.get_data_as_data_frame()
         print(pred_df)
         print("before prediction")
